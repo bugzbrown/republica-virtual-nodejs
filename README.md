@@ -5,6 +5,8 @@ Importar o pacote request via comando
 ```bash
 npm install --save request
 ```
+
+Seu arquivo.js:
 ```Javascript
 
 const request = require('request');
@@ -23,3 +25,12 @@ request('http://republicavirtual.com.br/web_cep.php?cep=' + cep + '&formato=json
 ```
 
 Eu vou subir um projeto exemplo em breve, mas isso já deve ajduar.
+Basta rodar o arquivo na linha de comando para ver o resultado.
+```bash
+node arquivo.js
+```
+resultado em JSON:
+```json
+{"resultado":"1","resultado_txt":"sucesso - cep completo","uf":"SP","cidade":"S\u00e3o Paulo","bairro":"Indian\u00f3polis","tipo_logradouro":"Avenida","logradouro":"Macuco"}
+```
+
