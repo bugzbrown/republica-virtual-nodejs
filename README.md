@@ -1,4 +1,43 @@
 # republica-virtual-nodejs
+
+## Projeto exemplo
+Este projeto exemplo serve dois propósitos:
+
+1) Permitir que eu entenda como funciona o desenvovlimento en NodeJs / caso de estudo
+
+2) Dar uma opção para quem está procurando algum sistema de consulta de CEP.
+
+O projeto usa o MongoDB para fazer um armazenamento local dos dados que são consultados no Republica Virtual. Dessa forma, consultas 
+subsequentes ao CEP serão buscadas da base local e não do serviço online.
+
+Isso acontece de forma transparente para o desenvolvedor, que recebe devolta um objeto com essa estrutura:
+
+```Javascript
+{ __v: 0,
+  tipo_log: 'Rua',
+  logradouro: 'Doutor Pelágio Marques',
+  bairro: 'Vila Matilde',
+  cidade: 'São Paulo',
+  estado: 'SP',
+  pais: 'Brasil',
+  cep: '03512010',
+  _id: 58ef97dd068f313698861eb5 }
+```
+
+### fluxo
+O fluxo é bem simples:
+```
+Você busca o CEP usando o metodo *modelo.findCEP('00000-000')*
+
+O CEP é valido? Se sim, fazemos um consulta na base local.
+Se o CEP existe na base local, retornamos o documento.
+Se o CEP não existe na base, fazemos uma consulta no Republica Virtual.
+Se o CEP não existe no RV retornamos um erro avisando que não foi encontrado o CEP
+Se o CEP existe, salvamos ele na base local, e retornamos o documento salvo.
+
+```
+
+
 Script exemplo para usar o serviço da república virtual
 
 Importar o pacote request via comando 
