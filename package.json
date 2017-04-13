@@ -1,0 +1,38 @@
+{
+  "name": "republica-virtual-nodejs",
+  "version": "1.0.0",
+  "description": "Projeto exemplo de utilização do serviço da Republica Virtual usando o NodeJS e MongoDB",
+  "main": "app/server.js",
+  "scripts": {
+    "test": "mocha test --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bugzbrown/republica-virtual-nodejs.git"
+  },
+  "keywords": [
+    "CEP",
+    "Node",
+    "javascript",
+    "mongo"
+  ],
+  "author": "bugzbrown <bugzbrown@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bugzbrown/republica-virtual-nodejs/issues"
+  },
+  "homepage": "https://github.com/bugzbrown/republica-virtual-nodejs#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.4",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0",
+    "request-promise-native": "^1.0.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  }
+}
