@@ -4,7 +4,8 @@
   "description": "Projeto exemplo de utilização do serviço da Republica Virtual usando o NodeJS e MongoDB",
   "main": "app/server.js",
   "scripts": {
-    "test": "mocha test --recursive"
+    "test": "mocha test --recursive",
+    "start" : "node app/server.js"
   },
   "repository": {
     "type": "git",
