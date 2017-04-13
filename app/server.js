@@ -3,10 +3,15 @@
 
 const express = require('express');
 var mongoose = require('mongoose');
+var bodyParser = require('body-parser')
 
 const app = express();
 const port = process.env.PORT || 8081;
 
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
 // conectar com um banco de dados
 // essa parte pode ser comentada pois não é necessária
 // porem, é recomendado que se armazene os resultados

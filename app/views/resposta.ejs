@@ -3,8 +3,17 @@
         <title>Teste Republica Virtual</title>
     </head>
     <body>
-        <h1>Hello World</h1>
+        <h1><%=result.cep%></h1>
         <nav><a href="/">Voltar</a></nav>
+        <div>
+            <span><%=result.tipo_log%></span>
+            <span><%=result.logradouro%></span>
+        </div>
+        <div>
+            <span><%=result.bairro%></span> - 
+            <span><%=result.cidade%></span> - 
+            <span><%=result.estado%></span>
+        </div>
         <small>Essa página deliberadamente está muito simples para focarmos somente na parte server side.</small>
     </body>
 </html>
